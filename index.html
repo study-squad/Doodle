@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EDIT: the title shows in the browser tab -->
+<title>Doodle | Custom T-shirts, mugs &amp; hoodies</title>
+<meta name="description" content="Custom T-shirts, mugs and hoodies made to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* EDIT COLORS HERE */
+  :root {
+    --ink: #14161f;
+    --paper: #ffffff;
+    --cyan: #00a6d6;
+    --magenta: #e6007e;
+    --yellow: #ffd500;
+    --soft: #f2f4f7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: "Archivo Black", Impact, sans-serif; line-height: 1.05; margin: 0; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO: the title looks like an off-register print */
+  .hero { padding: 72px 0 56px; }
+  .hero h1 {
+    font-size: clamp(2.6rem, 11vw, 5.6rem);
+    text-shadow: -4px 3px 0 var(--cyan), 4px -2px 0 var(--magenta);
+    letter-spacing: 0.5px;
+    overflow-wrap: anywhere;
+  }
+  .hero p { font-size: 1.2rem; max-width: 34ch; margin: 24px 0 28px; }
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .btn:hover { background: var(--magenta); }
+  .btn.light { background: var(--yellow); color: var(--ink); }
+  .btn.light:hover { background: var(--paper); }
+
+  section { padding: 56px 0; }
+  section h2 { font-size: clamp(1.8rem, 6vw, 2.6rem); margin-bottom: 8px; }
+  .sub { margin: 0 0 32px; max-width: 52ch; }
+
+  /* PRODUCTS */
+  .products { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .product { border-top: 10px solid var(--c); padding-top: 14px; }
+  .product.hoodies { --c: var(--cyan); }
+  .product.mugs { --c: var(--magenta); }
+  .product.shirts { --c: var(--yellow); }
+  .photo {
+    aspect-ratio: 4 / 3;
+    background: var(--soft);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+    color: #5b6170;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .product h3 { font-size: 1.5rem; margin-bottom: 6px; }
+  .product p { margin: 0 0 10px; }
+  .price { font-weight: 700; }
+
+  /* HOW TO ORDER: a real sequence, so numbered */
+  .steps { background: var(--ink); color: var(--paper); }
+  .steps ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); counter-reset: s; }
+  .steps li { counter-increment: s; padding-top: 14px; border-top: 2px solid var(--yellow); }
+  .steps li::before { content: counter(s) "."; font-family: "Archivo Black", Impact, sans-serif; font-size: 1.6rem; color: var(--yellow); display: block; }
+
+  footer { padding: 40px 0; font-size: 0.95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
+  footer a { color: var(--ink); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <!-- EDIT: your shop name -->
+    <h1>Doodle</h1>
+    <!-- EDIT: one line about what you do -->
+    <p>Custom T-shirts, mugs and hoodies, printed with your name or design.</p>
+    <a class="btn" href="https://ig.me/m/_.zuhairlalpariya">Order on Instagram</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What I make</h2>
+    <p class="sub">Every item is printed to order. Send me your name, idea or design and I’ll make it.</p>
+
+    <div class="products">
+
+      <article class="product shirts">
+        <div class="photo">
+          <!-- EDIT: delete this text and use your photo instead:
+               <img src="tshirt.jpg" alt="Custom T-shirt"> -->
+          Your T-shirt photo here
+        </div>
+        <h3>Printed T-shirts</h3>
+        <p>For friend groups, class events and teams. Ask about bulk prices.</p>
+        <p class="price">₹300</p>
+      </article>
+
+      <article class="product mugs">
+        <div class="photo">
+          <!-- EDIT: <img src="mug.jpg" alt="Personalized mug"> -->
+          Your mug photo here
+        </div>
+        <h3>Custom mugs</h3>
+        <p>Names, photos or quotes. A gift people actually keep.</p>
+        <p class="price">₹250</p>
+      </article>
+
+      <article class="product hoodies">
+        <div class="photo">
+          <!-- EDIT: <img src="hoodie.jpg" alt="Custom hoodie"> -->
+          Your hoodie photo here
+        </div>
+        <h3>Custom hoodies</h3>
+        <p>Warm, soft and printed with your own design or name.</p>
+        <p class="price">₹500</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How to order</h2>
+    <p class="sub">Four steps, no forms.</p>
+    <ol>
+      <li><strong>Message me.</strong> Tell me the product, quantity and your name or idea.</li>
+      <li><strong>Approve the design.</strong> I send a preview before printing.</li>
+      <li><strong>Pay half.</strong> The other half is due when you collect it.</li>
+      <li><strong>Pick up.</strong> Most orders are ready in 2 to 4 days.</li>
+    </ol>
+    <p style="margin-top:32px"><a class="btn light" href="https://ig.me/m/_.zuhairlalpariya">Start your order</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Doodle</span>
+    <a href="https://instagram.com/_.zuhairlalpariya">@_.zuhairlalpariya on Instagram</a>
+  </div>
+</footer>
+
+</body>
+</html>
